@@ -34,7 +34,7 @@ A real-time financial dashboard powered by a continuous **10-second data ingesti
 * **The Business Problem:** Raw global logistics logs made it difficult to pinpoint which shipping regions were missing delivery SLAs or which product categories were causing recurring fulfillment delays.
 * **The Approach:** Built a structured ELT pipeline in **PostgreSQL** by importing 50+ raw attributes from the DataCo Supply Chain dataset into an all-text staging table `staging_dataco` and casting core fields (::INT, ::NUMERIC) into a typed production table `supply_chain_raw`. Engineered two reusable **SQL views** —`view_regional_sla` (tracking late-delivery percentages and average shipping days by region) and `view_product_friction` (filtering categories with >100 orders to rank average overdue days)—before connecting them to an interactive **Tableau** dashboard.
 * **The Impact:** Streamlined raw logistics data into a clean, reusable SQL reporting layer, enabling stakeholders to instantly identify high-delay regions and overdue product categories without scanning raw transaction tables.
-* 🔗 [**View Project Repository**](https://github.com/krishna043-prog/Supply-Chain-SLA-Analysis) | [**View Tableau Dashboard**](https://github.com/krishna043-prog/Supply-Chain-SLA-Analysis/blob/main/Supply_Chain_Dashboard.twbx)
+* 🔗 [**View Project Repository**](https://github.com/krishna043-prog/Supply-Chain-SLA-Analysis) | [**View Tableau Dashboard**](https://github.com/krishna043-prog/Supply-Chain-SLA-Analysis/blob/main/supply_chain_dashboard_screenshot.png)
 
 
 
