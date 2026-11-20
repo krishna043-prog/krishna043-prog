@@ -21,20 +21,20 @@ A real-time financial dashboard powered by a continuous **10-second data ingesti
 * **10-Second Ingestion Engine:** Built a resilient **Python** loop **(Finnhub, Pandas, SQLAlchemy)** that pulls live quotes, computes net/percentage changes, and handles network blips every 10 seconds without breaking the stream.
 * **Zero-Lag PostgreSQL Design:** Split storage into `live_stock_history` (appending 7 new rows every 10 seconds for trend lines) and `live_stock_history_snapshot` (replacing a 7-row table every 10 seconds for instant KPI loading).
 * **Live Power BI Command Center:** Visualized real-time KPI cards, intraday area charts, and a color-coded watchlist with one-click company filtering.
-* 🔗 [**View Project Repository**](https://github.com/krishna043-prog/Finnhub-Live-Market-Tracker)
+* 🔗 [**View Project Repository**](https://github.com/krishna043-prog/Finnhub-Live-Market-Tracker) | [**View Power BI Dashboard**](https://github.com/krishna043-prog/Finnhub-Live-Market-Tracker/blob/main/finnhub_live_dashboad/finnhub_live_dashboard_screenshot.png) | [**Open Project Report**](https://github.com/krishna043-prog/Finnhub-Live-Market-Tracker/blob/main/Finnhub_live_market_tracker_report.pdf)
 
 
 #### 🛍️ Customer Shopping Behavior Analysis
 * **The Business Problem:** Fragmented consumer transaction records made it difficult to analyze buyer demographic trends, track promotion code conversion rates, or evaluate shipping tier performance.
 * **The Approach:** Engineered an end-to-end data pipeline modeling a realistic business intelligence lifecycle. Cleansed and standardized 3,900 rows and 18 columns using **Python (Pandas)** in **Jupyter Notebook** by handling missing values and automating schema string modifications. Migrated the structured tables into **SQL (MySQL/pgAdmin)** to write advanced aggregations (CTEs, subqueries, and window functions), and deployed an executive dashboard in **Power BI** to map key KPIs.
 * **The Impact:** Replicated a full corporate BI lifecycle that streamlined raw data inputs into an interactive dashboard, allowing stakeholders to instantly segment visual charts by subscription level, gender, and shipping type with single-click functionality.
-* 🔗 [**View Project Repository**](https://github.com/krishna043-prog/Customer-Shopping-Behavior-Analysis) | [**Open Project Report**](https://github.com/krishna043-prog/Customer-Shopping-Behavior-Analysis/blob/main/customer_shopping_behavior_report.pdf)
+* 🔗 [**View Project Repository**](https://github.com/krishna043-prog/Customer-Shopping-Behavior-Analysis) | [**View Power BI Dashboard**](https://github.com/krishna043-prog/Customer-Shopping-Behavior-Analysis/blob/main/customer_shopping_behavior_dashboard.pdf) | [**Open Project Report**](https://github.com/krishna043-prog/Customer-Shopping-Behavior-Analysis/blob/main/customer_shopping_behavior_report.pdf)
 
 #### 🚚 Supply Chain Data Analysis
 * **The Business Problem:** Raw global logistics logs made it difficult to pinpoint which shipping regions were missing delivery SLAs or which product categories were causing recurring fulfillment delays.
 * **The Approach:** Built a structured ELT pipeline in **PostgreSQL** by importing 50+ raw attributes from the DataCo Supply Chain dataset into an all-text staging table `staging_dataco` and casting core fields (::INT, ::NUMERIC) into a typed production table `supply_chain_raw`. Engineered two reusable **SQL views** —`view_regional_sla` (tracking late-delivery percentages and average shipping days by region) and `view_product_friction` (filtering categories with >100 orders to rank average overdue days)—before connecting them to an interactive **Tableau** dashboard.
 * **The Impact:** Streamlined raw logistics data into a clean, reusable SQL reporting layer, enabling stakeholders to instantly identify high-delay regions and overdue product categories without scanning raw transaction tables.
-* 🔗 [**View Project Repository**](https://github.com/krishna043-prog/Supply-Chain-SLA-Analysis)
+* 🔗 [**View Project Repository**](https://github.com/krishna043-prog/Supply-Chain-SLA-Analysis) | [**View Tableau Dashboard**](https://github.com/krishna043-prog/Supply-Chain-SLA-Analysis/blob/main/Supply_Chain_Dashboard.twbx)
 
 
 
